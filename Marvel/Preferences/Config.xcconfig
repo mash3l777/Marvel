@@ -1,0 +1,15 @@
+//
+//  Config.xcconfig
+//  Marvel
+//
+//  Created by مشعل المعمري on 15/08/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+
+API_PUBLIC_KEY =  "PUBLIC KEY HERE"
+
+API_PRIVATE_KEY = "PRIVATE KEY HERE"

@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import CryptoKit
 
 
 extension API {
@@ -18,11 +17,10 @@ extension API {
         func fetchCharacters(limit:Int, offset:Int, vc:UIViewController, completionHandler: @escaping CompletionHandler) {
             
             let ts:String = String(Date().timeIntervalSince1970)
-            let publicKey:String = "***REMOVED***"
-            let privateKey:String = "***REMOVED***"
-            let hash:String = MD5(string: ts + privateKey + publicKey)
             
-            let url = appProperties.baseURL + appProperties.characters + "?ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash
+            let hash:String = MD5(string: ts + appProperties.getPrivateKey() +  appProperties.getPublicKey())
+            
+            let url = appProperties.baseURL + appProperties.characters + "?ts=" + ts + "&apikey=" + appProperties.getPublicKey() + "&hash=" + hash
             
             let headers : HTTPHeaders = [
                "Content-Type": "application/json",
@@ -35,14 +33,4 @@ extension API {
         
     }
     
-}
-
-
-
-func MD5(string: String) -> String {
-    let digest = Insecure.MD5.hash(data: string.data(using: .utf8) ?? Data())
-
-    return digest.map {
-        String(format: "%02hhx", $0)
-    }.joined()
 }

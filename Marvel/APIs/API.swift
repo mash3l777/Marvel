@@ -7,9 +7,12 @@
 
 import UIKit
 import Alamofire
+import CryptoKit
 
 class API: NSObject {
     let characters = Characters()
+    
+    
     //  api response completion handler (success,result,error)
     typealias CompletionHandler = (_ success:Bool, _ result:Any?,_ error:NSError?) -> Void
     
@@ -62,9 +65,18 @@ class API: NSObject {
                    }
                }
        }
-    
+ 
+
 }
 
+
+func MD5(string: String) -> String {
+    let digest = Insecure.MD5.hash(data: string.data(using: .utf8) ?? Data())
+
+    return digest.map {
+        String(format: "%02hhx", $0)
+    }.joined()
+}
 
 //extension DataRequest {
     
