@@ -7,8 +7,8 @@
 
 import UIKit
 
-// MARK: - Comic
-struct Comic: Codable {
+// MARK: - ComicsDetails
+struct ComicsDetails: Codable {
     let available: Int?
     let collectionURI: String?
     let items: [ComicSummary]?

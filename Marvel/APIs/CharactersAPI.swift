@@ -16,11 +16,11 @@ extension API {
         // MARK: - Fetch Characters List
         func fetchCharacters(limit:Int, offset:Int, vc:UIViewController, completionHandler: @escaping CompletionHandler) {
             
-            let ts:String = String(Date().timeIntervalSince1970)
+            let ts:String = "\(Int(Date().timeIntervalSince1970))"
             
-            let hash:String = MD5(string: ts + appProperties.getPrivateKey() +  appProperties.getPublicKey())
-            
-            let url = appProperties.baseURL + appProperties.characters + "?ts=" + ts + "&apikey=" + appProperties.getPublicKey() + "&hash=" + hash
+            let hash = MD5(string: ts + appProperties.getPrivateKey() + appProperties.getPublicKey())
+            let publicKey = appProperties.getPublicKey()
+            let url = appProperties.baseURL + appProperties.characters + "?ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
             
             let headers : HTTPHeaders = [
                "Content-Type": "application/json",

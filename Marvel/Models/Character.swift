@@ -29,10 +29,10 @@ struct CharacterDataContainer: Codable {
 // MARK: - Character
 struct Character: Codable {
     let id: Int?
-    let name: String?
+    let name:String?
     let thumbnail: Thumbnail?
     let resourceURI: String?
-    let comics: Comic?
+    let comics: ComicsDetails?
     let urls: [URLElement]?
     
 }

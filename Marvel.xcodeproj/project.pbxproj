@@ -22,8 +22,13 @@
 		D118288E28A427AF00DC5335 /* CharactersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118288D28A427AE00DC5335 /* CharactersAPI.swift */; };
 		D118289528A4290500DC5335 /* AppProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118289428A4290500DC5335 /* AppProperties.swift */; };
 		D118289728A42AC300DC5335 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118289628A42AC300DC5335 /* Character.swift */; };
-		D118289928A42FC400DC5335 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118289828A42FC400DC5335 /* Comic.swift */; };
+		D118289928A42FC400DC5335 /* ComicsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118289828A42FC400DC5335 /* ComicsDetails.swift */; };
 		D118289F28AAA0A600DC5335 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D118289E28AAA0A600DC5335 /* .gitignore */; };
+		D11828A228AAA36700DC5335 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11828A028AAA36700DC5335 /* CharacterCell.swift */; };
+		D11828A328AAA36700DC5335 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11828A128AAA36700DC5335 /* CharacterCell.xib */; };
+		D11828A628AADAD200DC5335 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = D11828A528AADAD200DC5335 /* AlamofireImage */; };
+		D11828A928AB0F6B00DC5335 /* CharacterDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11828A728AB0F6B00DC5335 /* CharacterDetailsVC.swift */; };
+		D11828AA28AB0F6B00DC5335 /* CharacterDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11828A828AB0F6B00DC5335 /* CharacterDetailsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +67,13 @@
 		D118288D28A427AE00DC5335 /* CharactersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPI.swift; sourceTree = "<group>"; };
 		D118289428A4290500DC5335 /* AppProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProperties.swift; sourceTree = "<group>"; };
 		D118289628A42AC300DC5335 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		D118289828A42FC400DC5335 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		D118289828A42FC400DC5335 /* ComicsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetails.swift; sourceTree = "<group>"; };
 		D118289C28AA9EAB00DC5335 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		D118289E28AAA0A600DC5335 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D11828A028AAA36700DC5335 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		D11828A128AAA36700DC5335 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		D11828A728AB0F6B00DC5335 /* CharacterDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsVC.swift; sourceTree = "<group>"; };
+		D11828A828AB0F6B00DC5335 /* CharacterDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D118288A28A4235500DC5335 /* Alamofire in Frameworks */,
+				D11828A628AADAD200DC5335 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +106,10 @@
 		D118284128A4082F00DC5335 = {
 			isa = PBXGroup;
 			children = (
-				D118289D28AAA05D00DC5335 /* Git */,
 				D118284C28A4082F00DC5335 /* Marvel */,
 				D118286628A4083400DC5335 /* MarvelTests */,
 				D118287028A4083400DC5335 /* MarvelUITests */,
+				D118289D28AAA05D00DC5335 /* Git */,
 				D118284B28A4082F00DC5335 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D118289628A42AC300DC5335 /* Character.swift */,
-				D118289828A42FC400DC5335 /* Comic.swift */,
+				D118289828A42FC400DC5335 /* ComicsDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +172,9 @@
 			children = (
 				D118285B28A4083300DC5335 /* LaunchScreen.storyboard */,
 				D118288428A4116900DC5335 /* CharactersListVC.xib */,
+				D11828A028AAA36700DC5335 /* CharacterCell.swift */,
+				D11828A128AAA36700DC5335 /* CharacterCell.xib */,
+				D11828A828AB0F6B00DC5335 /* CharacterDetailsVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				D118288328A4116900DC5335 /* CharactersListVC.swift */,
+				D11828A728AB0F6B00DC5335 /* CharacterDetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +232,7 @@
 			name = Marvel;
 			packageProductDependencies = (
 				D118288928A4235500DC5335 /* Alamofire */,
+				D11828A528AADAD200DC5335 /* AlamofireImage */,
 			);
 			productName = Marvel;
 			productReference = D118284A28A4082F00DC5335 /* Marvel.app */;
@@ -293,6 +308,7 @@
 			mainGroup = D118284128A4082F00DC5335;
 			packageReferences = (
 				D118288828A4235500DC5335 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D11828A428AADAD200DC5335 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = D118284B28A4082F00DC5335 /* Products */;
 			projectDirPath = "";
@@ -311,7 +327,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D118289F28AAA0A600DC5335 /* .gitignore in Resources */,
+				D11828AA28AB0F6B00DC5335 /* CharacterDetailsVC.xib in Resources */,
 				D118288628A4116900DC5335 /* CharactersListVC.xib in Resources */,
+				D11828A328AAA36700DC5335 /* CharacterCell.xib in Resources */,
 				D118285D28A4083300DC5335 /* LaunchScreen.storyboard in Resources */,
 				D118285A28A4083300DC5335 /* Assets.xcassets in Resources */,
 			);
@@ -340,11 +358,13 @@
 			files = (
 				D118289728A42AC300DC5335 /* Character.swift in Sources */,
 				D118284E28A4083000DC5335 /* AppDelegate.swift in Sources */,
+				D11828A928AB0F6B00DC5335 /* CharacterDetailsVC.swift in Sources */,
 				D118285828A4083000DC5335 /* Marvel.xcdatamodeld in Sources */,
 				D118288E28A427AF00DC5335 /* CharactersAPI.swift in Sources */,
 				D118289528A4290500DC5335 /* AppProperties.swift in Sources */,
+				D11828A228AAA36700DC5335 /* CharacterCell.swift in Sources */,
 				D118288528A4116900DC5335 /* CharactersListVC.swift in Sources */,
-				D118289928A42FC400DC5335 /* Comic.swift in Sources */,
+				D118289928A42FC400DC5335 /* ComicsDetails.swift in Sources */,
 				D118285028A4083000DC5335 /* SceneDelegate.swift in Sources */,
 				D118288C28A4238900DC5335 /* API.swift in Sources */,
 			);
@@ -396,6 +416,7 @@
 /* Begin XCBuildConfiguration section */
 		D118287528A4083400DC5335 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D118289C28AA9EAB00DC5335 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -456,6 +477,7 @@
 		};
 		D118287628A4083400DC5335 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D118289C28AA9EAB00DC5335 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -688,6 +710,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D11828A428AADAD200DC5335 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -695,6 +725,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D118288828A4235500DC5335 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		D11828A528AADAD200DC5335 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D11828A428AADAD200DC5335 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
